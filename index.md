@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Главная
+show_sidebar: false
 ---
 
 <div class="home-intro">
