@@ -1,14 +1,13 @@
-/* Общий стиль */
+/* Общие */
 body {
-  background: #0d1117; /* темно-синий */
-  color: #39ff14; /* консольно-зеленый */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #0d1117;
+  color: #c9d1d9;
+  font-family: "Segoe UI", Tahoma, sans-serif;
   margin: 0;
-  padding: 0;
 }
 
 /* Шапка */
-header {
+.site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,80 +15,124 @@ header {
   background: #161b22;
 }
 
-header .main a {
+.logo a {
   text-decoration: none;
   font-size: 1.8rem;
-  color: #39ff14;
-  border-bottom: 2px solid #39ff14;
+  color: #c9d1d9;
+  border-bottom: 2px solid #50fa7b;
 }
 
-header nav {
+.menu {
   display: flex;
   gap: 20px;
 }
 
-header nav a {
-  color: #39ff14;
+.menu a {
+  color: #50fa7b;
   text-decoration: none;
-  font-size: 1rem;
+  padding: 5px 8px;
 }
 
-header nav a:hover {
-  background: #39ff14;
+.menu a:hover {
+  background: #50fa7b;
   color: #0d1117;
-  padding: 5px 10px;
   border-radius: 6px;
 }
 
-/* Бургер */
+/* Бургер (только мобилки) */
 .burger {
   display: none;
   font-size: 2rem;
+  color: #50fa7b;
   cursor: pointer;
 }
 
-/* Список статей */
-.list {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 0 20px;
+@media (max-width: 900px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #161b22;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+/* Главная */
+.home-intro {
+  max-width: 800px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+/* Контейнер с блогом */
+.blog-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
 
-/* Посты */
 .posts-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
-.list-item {
+.post-card {
   background: #161b22;
-  padding: 20px;
   border-radius: 12px;
+  padding: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-.list-item h1 a {
-  color: #39ff14;
+.post-card h2 a {
+  color: #50fa7b;
   text-decoration: none;
 }
 
-.list-item h1 a:hover {
-  text-decoration: underline;
+.post-card h2 a:hover {
+  background: #50fa7b;
+  color: #0d1117;
+  border-radius: 4px;
 }
 
-.list-item time {
+.post-card time {
   font-size: 0.9rem;
   color: #8b949e;
 }
 
-.description {
+.read-more {
+  display: inline-block;
   margin-top: 10px;
-  font-size: 1rem;
-  color: #c9d1d9;
+  color: #50fa7b;
+  text-decoration: none;
+  border: 1px solid #50fa7b;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.read-more:hover {
+  background: #50fa7b;
+  color: #0d1117;
+}
+
+.tags {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #8b949e;
 }
 
 /* Сайдбар */
@@ -99,29 +142,27 @@ header nav a:hover {
   border-radius: 12px;
 }
 
+.sidebar a {
+  color: #50fa7b;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Пост внутри */
+.post-content {
+  max-width: 80%;
+  margin: 40px auto;
+  background: #161b22;
+  padding: 30px;
+  border-radius: 12px;
+}
+
 /* Адаптив */
 @media (max-width: 900px) {
-  .list {
+  .blog-container {
     grid-template-columns: 1fr;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    background: #161b22;
-    padding: 10px;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    border-radius: 8px;
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  .burger {
-    display: block;
-    color: #39ff14;
   }
 }
