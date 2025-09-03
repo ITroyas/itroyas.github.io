@@ -7,10 +7,12 @@ tags: [python, bash]
 image: /assets/images/paplay.png
 ---
 
-Вот пример кода:
+> Вот пример кода:
 
 ```bash
 # bash example
 sudo apt update
 sudo apt upgrade
 ```
+> [!SHELL]
+> Advises about risks or negative outcomes of certain actions.
