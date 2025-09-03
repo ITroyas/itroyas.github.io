@@ -8,6 +8,9 @@ permalink: /blog/
   <div class="posts-grid">
     {% for post in site.posts %}
     <article class="post-card">
+        {% if post.image %}
+    <img src="{{ post.image }}" alt="{{ post.title }}" class="post-thumb">
+  {% endif %}
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <time>{{ post.date | date: "%d %b %Y" }}</time>
       <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
