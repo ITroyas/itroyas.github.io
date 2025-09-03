@@ -7,11 +7,10 @@ tags: [python, bash]
 image: /assets/images/paplay.png
 ---
 
+Вот пример кода:
+
 ```bash
 # bash example
 sudo apt update
 sudo apt upgrade
 
-```python
-def hello():
-  print("Hello World!")
