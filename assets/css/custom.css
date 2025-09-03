@@ -21,6 +21,10 @@ body {
   color: #c9d1d9;
   border-bottom: 2px solid #50fa7b;
 }
+.logo:hover {
+  background: #50fa7b;
+  color: #0d1117;
+  
 
 .menu {
   display: flex;
@@ -28,9 +32,9 @@ body {
 }
 
 .menu a {
-  color: #50fa7b;
-  text-decoration: none;
+  color: #d2d2d2;
   padding: 5px 8px;
+  border-bottom: 2px solid #50fa7b;
 }
 
 .menu a:hover {
