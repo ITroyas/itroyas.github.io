@@ -1,58 +1,28 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} — ITroyas</title>
-  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-</head>
 <body>
+  <div class="content">
+    <header>
+      <div class="main"><a href="/">ITroyas</a></div>
+      <nav class="menu">
+        <a href="/">Главная</a>
+        <a href="/blog">Блог</a>
+        <a href="/categories">Категории</a>
+        <a href="https://t.me/itroyas">Telegram</a>
+      </nav>
+      <div class="burger">&#9776;</div>
+    </header>
 
-  <!-- Шапка -->
-  <header class="site-header">
-    <h1 class="logo"><a href="{{ '/' | relative_url }}">ITroyas</a></h1>
-    <nav class="menu">
-      <ul class="menu-list">
-        <li><a href="{{ '/' | relative_url }}">Главная</a></li>
-        <li><a href="{{ '/blog/' | relative_url }}">Блог</a></li>
-        <li><a href="{{ '/categories/' | relative_url }}">Категории</a></li>
-        <li><a href="https://t.me/your_channel" target="_blank">Телеграм</a></li>
-      </ul>
-      <div class="burger" id="burger">&#9776;</div>
-    </nav>
-  </header>
-
-  <div class="container">
-    <main class="content">
+    <main class="list">
       {{ content }}
     </main>
 
-    {% if page.show_sidebar %}
-    <aside class="sidebar">
-      <h3>Категории</h3>
-      <ul>
-        {% assign alltags = site.tags | sort %}
-        {% for tag in alltags %}
-          <li><a href="{{ '/tags/' | relative_url }}#{{ tag[0] }}">#{{ tag[0] }}</a></li>
-        {% endfor %}
-      </ul>
-    </aside>
-    {% endif %}
+    <footer>
+      <div class="footer-info">2025 © ITroyas</div>
+    </footer>
   </div>
 
-  <footer class="site-footer">
-    © {{ site.time | date: "%Y" }} ITroyas
-  </footer>
-
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const burger = document.getElementById('burger');
-      const menuList = document.querySelector('.menu-list');
-      burger.addEventListener('click', function() {
-        menuList.classList.toggle('show');
-      });
+    document.querySelector('.burger').addEventListener('click', function() {
+      document.querySelector('.menu').classList.toggle('show');
     });
   </script>
-
 </body>
-</html>
