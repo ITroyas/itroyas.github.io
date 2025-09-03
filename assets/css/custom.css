@@ -60,15 +60,18 @@ body {
 
 /* Контейнер */
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 250px; /* контент + сайдбар */
   gap: 20px;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Контент */
 .content {
-  flex: 1;
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Главная */
@@ -134,17 +137,18 @@ body {
 
 /* Сайдбар */
 .sidebar {
-  width: 200px;
   background: #161b22;
   padding: 15px;
   border-radius: 12px;
+  height: fit-content;
 }
 
 /* Адаптив */
 @media (max-width: 900px) {
   .container {
-    flex-direction: column;
+    grid-template-columns: 1fr; /* сайдбар под контентом */
   }
+}
   .sidebar {
     width: 100%;
   }
