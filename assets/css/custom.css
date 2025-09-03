@@ -1,8 +1,8 @@
-/* Общий фон */
+/* Основной фон */
 body {
   background: #0d1117;
-  color: #c9d1d9;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #00ff00;
+  font-family: "Fira Code", monospace;
   margin: 0;
   padding: 0;
 }
@@ -13,15 +13,24 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: #161b22;
+  background: #0d1117;
+  border-bottom: 1px solid #00ff00;
 }
 
 .logo a {
-  color: #00d8ff;
+  color: #00ff00;
   font-size: 1.8rem;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
+.logo a:hover {
+  background: #00ff00;
+  color: #0d1117;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Меню */
 .menu-list {
   display: flex;
   gap: 20px;
@@ -29,17 +38,24 @@ body {
 }
 
 .menu-list li a {
-  color: #00d8ff;
+  color: #00ff00;
   text-decoration: none;
   font-weight: bold;
+}
+
+.menu-list li a:hover {
+  background: #00ff00;
+  color: #0d1117;
+  padding: 5px 8px;
+  border-radius: 4px;
 }
 
 /* Бургер */
 .burger {
   display: none;
   font-size: 2rem;
+  color: #00ff00;
   cursor: pointer;
-  color: #00d8ff;
 }
 
 /* Контейнер */
@@ -53,8 +69,6 @@ body {
 .content {
   flex: 1;
   max-width: 800px;
-  margin: 40px auto;
-  padding: 0 50px;
 }
 
 /* Главная */
@@ -63,13 +77,8 @@ body {
   margin: 80px auto;
   padding: 30px;
   text-align: center;
-  background: #34495e;
+  background: #161b22;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-}
-
-.home-intro h2 {
-  color: #00d8ff;
 }
 
 /* Сетка постов */
@@ -86,81 +95,58 @@ body {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-  display: flex;
-  flex-direction: column;
   width: 100%;
   max-width: 350px;
 }
 
-.post-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
+.post-card h2 a {
+  color: #00ff00;
+  text-decoration: none;
+}
+
+.post-date {
+  font-size: 0.85rem;
   margin-bottom: 10px;
 }
 
-.post-meta {
-  font-size: 0.85rem;
-  color: #a0b0c0;
-  margin-bottom: 5px;
-}
-
-.post-card h2 {
-  font-size: 1.3rem;
-  color: #00d8ff;
-}
-
 .read-more {
-  text-decoration: none;
-  color: #1e90ff;
-  font-weight: bold;
+  display: inline-block;
   margin-top: 10px;
+  text-decoration: none;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.read-more:hover {
+  background: #00ff00;
+  color: #0d1117;
 }
 
 .post-tags {
   display: flex;
   justify-content: flex-end;
-  gap: 5px;
+  gap: 8px;
   font-size: 0.85rem;
-  color: #a0b0c0;
+  margin-top: 10px;
 }
 
 /* Сайдбар */
 .sidebar {
   width: 200px;
-  flex-shrink: 0;
   background: #161b22;
   padding: 15px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Стили GitHub для кода */
-pre, code {
-  font-family: "Fira Code", monospace;
-  background: #161b22;
-  color: #c9d1d9;
-  padding: 10px;
-  border-radius: 6px;
-  display: block;
-  overflow-x: auto;
-}
-
-/* Цвета для синтаксиса */
-.highlight .k { color: #ff7b72; }  /* ключевые слова */
-.highlight .s { color: #a5d6ff; }  /* строки */
-.highlight .c { color: #8b949e; }  /* комментарии */
-
-
-/* Адаптивность */
+/* Адаптив */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
   }
   .sidebar {
     width: 100%;
-    margin-top: 20px;
   }
   .posts-grid {
     grid-template-columns: 1fr;
@@ -171,11 +157,9 @@ pre, code {
     position: absolute;
     top: 60px;
     right: 20px;
-    background: #1f2a38;
+    background: #161b22;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    z-index: 999;
   }
   .menu-list.show {
     display: flex;
@@ -183,4 +167,10 @@ pre, code {
   .burger {
     display: block;
   }
+}
+
+/* Пост в центре при открытии */
+.content article {
+  max-width: 80%;
+  margin: 0 auto;
 }
