@@ -11,4 +11,4 @@ image: /assets/images/paplay.png
 # пример скрипта
 ```echo "Hello, GitHub Pages!"```
 print("Привет, мир!")
-image: /assets/images/paplay.png
+![Описание картинки 1](/assets/images/paplay.png)
