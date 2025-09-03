@@ -208,6 +208,38 @@ body {
   }
 }
 
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  color: #c9d1d9;
+}
+
+.post-content p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.post-content pre {
+  background: #0d1117;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.post-content code {
+  background: #161b22;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.post-content blockquote {
+  border-left: 3px solid #50fa7b;
+  padding-left: 10px;
+  color: #8b949e;
+  font-style: italic;
+}
+
+
 /* Для очень больших экранов */
 @media (min-width: 2200px) {
   .post-content {
