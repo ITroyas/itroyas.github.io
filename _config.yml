@@ -16,4 +16,7 @@ plugins:
   - jekyll-seo-tag
 
 # Соц. ссылки (пример)
-github_username: your-github
+github_username: itroyas
+
+permalink: /posts/:title/
+
