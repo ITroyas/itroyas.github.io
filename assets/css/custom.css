@@ -106,8 +106,6 @@ body {
   
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* гарантирует, что все элементы в блоке помещаются */
-
 }
 
 .post-card h2 a {
