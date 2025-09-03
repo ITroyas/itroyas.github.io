@@ -70,6 +70,8 @@ body {
   .burger {
     display: block;
   }
+  .sidebar {
+    display: none;
 }
 
 /* Главная */
@@ -144,6 +146,7 @@ body {
   background: #161b22;
   padding: 15px;
   border-radius: 12px;
+  height: 
 }
 
 .sidebar a {
