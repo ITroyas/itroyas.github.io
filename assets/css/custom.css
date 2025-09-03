@@ -34,13 +34,14 @@ body {
 .menu a {
   color: #d2d2d2;
   padding: 5px 8px;
+  text-decoration: none;
   border-bottom: 2px solid #50fa7b;
 }
 
 .menu a:hover {
   background: #50fa7b;
   color: #0d1117;
-  border-radius: 6px;
+  border-radius: 2px;
 }
 
 /* Бургер (только мобилки) */
@@ -105,6 +106,7 @@ body {
 .post-card h2 a {
   color: #50fa7b;
   text-decoration: none;
+  border-bottom: 2px solid #50fa7b;
 }
 
 .post-card h2 a:hover {
