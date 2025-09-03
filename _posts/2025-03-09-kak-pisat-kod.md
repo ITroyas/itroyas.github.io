@@ -13,4 +13,4 @@ image: /assets/images/paplay.png
 # bash example
 sudo apt update
 sudo apt upgrade
-
+```
