@@ -1,6 +1,6 @@
 title: "Блог Troyas"
 description: "Инструкции, скрипты, заметки по IT"
-theme: jekyll-theme-tactile
+theme: jekyll-theme-primer
 
 # Локаль/язык
 lang: ru
