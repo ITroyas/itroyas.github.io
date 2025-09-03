@@ -9,7 +9,7 @@ permalink: /blog/
     {% for post in site.posts %}
     <article class="post-card">
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <time>{{ post.date | date: "%d %b %Y" }}</time>
+      <time>Опубликовано {{ post.date | date: "%d %b %Y" }}</time>
       <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
       <a class="read-more" href="{{ post.url }}">Читать далее</a>
       <div class="tags">
