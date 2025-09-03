@@ -1,138 +1,95 @@
-/* Основной фон */
+/* Общий стиль */
 body {
-  background: #1f2023;
-  color: #00ff00;
-  font-family: "Fira Code", monospace;
+  background: #0d1117; /* темно-синий */
+  color: #39ff14; /* консольно-зеленый */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 /* Шапка */
-.site-header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background: #0d1117;
-  border-bottom: 1px solid #00ff00;
+  padding: 15px 20px;
+  background: #161b22;
 }
 
-.logo a {
-  color: #00ff00;
+header .main a {
+  text-decoration: none;
   font-size: 1.8rem;
-  text-decoration: underline;
+  color: #39ff14;
+  border-bottom: 2px solid #39ff14;
 }
 
-.logo a:hover {
-  background: #00ff00;
-  color: #0d1117;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-/* Меню */
-.menu-list {
+header nav {
   display: flex;
   gap: 20px;
-  list-style: none;
 }
 
-.menu-list li a {
-  color: #bebebe;
+header nav a {
+  color: #39ff14;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 1rem;
 }
 
-.menu-list li a:hover {
-  background: #00ff00;
+header nav a:hover {
+  background: #39ff14;
   color: #0d1117;
-  padding: 5px 8px;
-  border-radius: 4px;
+  padding: 5px 10px;
+  border-radius: 6px;
 }
 
 /* Бургер */
 .burger {
   display: none;
   font-size: 2rem;
-  color: #00ff00;
   cursor: pointer;
 }
 
-/* Контейнер */
-.container {
+/* Список статей */
+.list {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
   display: grid;
-  grid-template-columns: 1fr 250px; /* контент + сайдбар */
+  grid-template-columns: 2fr 1fr;
   gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-/* Контент */
-.content {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Главная */
-.home-intro {
-  max-width: 800px;
-  margin: 80px auto;
-  padding: 30px;
-  text-align: center;
-  background: #161b22;
-  border-radius: 12px;
-}
-
-/* Сетка постов */
+/* Посты */
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 20px;
-  justify-items: center;
 }
 
-/* Карточка статьи */
-.post-card {
+.list-item {
   background: #161b22;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-  width: 100%;
-  max-width: 350px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-.post-card h2 a {
-  color: #dedede;
+.list-item h1 a {
+  color: #39ff14;
   text-decoration: none;
 }
 
-.post-date {
-  font-size: 0.85rem;
-  margin-bottom: 10px;
+.list-item h1 a:hover {
+  text-decoration: underline;
 }
 
-.read-more {
-  display: inline-block;
+.list-item time {
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+.description {
   margin-top: 10px;
-  text-decoration: none;
-  color: #00ff00;
-  border: 1px solid #00ff00;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.read-more:hover {
-  background: #00ff00;
-  color: #0d1117;
-}
-
-.post-tags {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  font-size: 0.85rem;
-  margin-top: 10px;
+  font-size: 1rem;
+  color: #c9d1d9;
 }
 
 /* Сайдбар */
@@ -140,41 +97,31 @@ body {
   background: #161b22;
   padding: 15px;
   border-radius: 12px;
-  height: fit-content;
 }
 
 /* Адаптив */
 @media (max-width: 900px) {
-  .container {
-    grid-template-columns: 1fr; /* сайдбар под контентом */
-  }
-}
-  .sidebar {
-    width: 100%;
-  }
-  .posts-grid {
+  .list {
     grid-template-columns: 1fr;
   }
-  .menu-list {
+
+  nav {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
     background: #161b22;
     padding: 10px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
     border-radius: 8px;
   }
-  .menu-list.show {
+
+  nav.show {
     display: flex;
   }
+
   .burger {
     display: block;
+    color: #39ff14;
   }
-}
-
-/* Пост в центре при открытии */
-.content article {
-  max-width: 80%;
-  margin: 0 auto;
 }
