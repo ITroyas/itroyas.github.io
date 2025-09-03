@@ -6,6 +6,16 @@
   <title>{{ page.title }} — ITroyas</title>
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 </head>
+  
+  <script>
+  const burger = document.getElementById('burger');
+  const menuList = document.querySelector('.menu-list');
+
+  burger.addEventListener('click', () => {
+    menuList.classList.toggle('show');
+  });
+</script>
+
 <body>
   <header class="site-header">
   <h1><a href="{{ '/' | relative_url }}">ITroyas</a></h1>
