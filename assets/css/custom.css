@@ -1,6 +1,6 @@
 /* Основной фон */
 body {
-  background: #0d1117;
+  background: ##1f2023;
   color: #00ff00;
   font-family: "Fira Code", monospace;
   margin: 0;
@@ -21,6 +21,7 @@ body {
   color: #00ff00;
   font-size: 1.8rem;
   text-decoration: underline;
+  border: 1px solid #00ff00;
 }
 
 .logo a:hover {
@@ -38,7 +39,7 @@ body {
 }
 
 .menu-list li a {
-  color: #00ff00;
+  color: #bebebe;
   text-decoration: none;
   font-weight: bold;
 }
@@ -103,7 +104,7 @@ body {
 }
 
 .post-card h2 a {
-  color: #00ff00;
+  color: #dedede;
   text-decoration: none;
 }
 
