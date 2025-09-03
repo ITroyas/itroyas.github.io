@@ -41,7 +41,6 @@ body {
 .menu a:hover {
   background: #50fa7b;
   color: #0d1117;
-  border-radius: 2px;
 }
 
 /* Бургер (только мобилки) */
