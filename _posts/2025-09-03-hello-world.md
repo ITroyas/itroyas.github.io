@@ -4,7 +4,7 @@ title: "Первый пост: старт блога"
 tags: [python, bash]
 ---
 
-```bash
+`bash
 # пример скрипта
-echo "Hello, GitHub Pages!"
+```echo "Hello, GitHub Pages!"```
 print("Привет, мир!")
