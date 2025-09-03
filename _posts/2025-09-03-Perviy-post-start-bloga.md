@@ -8,7 +8,7 @@ image: /assets/images/paplay.png
 ---
 
 `bash
-# пример скрипта
+## пример скрипта
 ```echo "Hello, GitHub Pages!"```
 print("Привет, мир!")
 <img src="/assets/images/paplay.png" alt="Описание 1" class="post-image">
