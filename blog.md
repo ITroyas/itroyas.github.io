@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Блог
+permalink: /blog/
 ---
 
 <div class="blog-container">
