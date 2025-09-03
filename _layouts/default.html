@@ -7,14 +7,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 </head>
   
-  <script>
-  const burger = document.getElementById('burger');
-  const menuList = document.querySelector('.menu-list');
 
-  burger.addEventListener('click', () => {
-    menuList.classList.toggle('show');
-  });
-</script>
 
 <body>
   <header class="site-header">
@@ -24,7 +17,7 @@
     <ul class="menu-list">
       <li><a href="{{ '/' | relative_url }}">Главная</a></li>
       <li><a href="{{ '/blog/' | relative_url }}">Блог</a></li>
-      <li><a href="https://t.me/yourhandle" target="_blank">Telegram</a></li>
+      <li><a href="https://t.me/itroyas" target="_blank">Telegram</a></li>
     </ul>
     <div class="burger" id="burger">&#9776;</div>
   </nav>
@@ -49,5 +42,14 @@
   <footer class="site-footer">
     © {{ site.time | date: "%Y" }} ITroyas
   </footer>
+
+  <script>
+  const burger = document.getElementById('burger');
+  const menuList = document.querySelector('.menu-list');
+
+  burger.addEventListener('click', () => {
+    menuList.classList.toggle('show');
+  });
+</script>
 </body>
 </html>
