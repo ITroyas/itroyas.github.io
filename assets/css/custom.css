@@ -52,6 +52,12 @@ body {
 }
 
 @media (max-width: 900px) {
+  .post-content {
+    max-width: 90%; /* почти на всю ширину */
+    margin: 20px auto;
+    padding: 15px;
+  }
+  
   .menu {
     display: none;
     flex-direction: column;
