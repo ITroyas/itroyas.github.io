@@ -7,7 +7,7 @@ tags: [python, bash]
 image: /assets/images/paplay.png
 ---
 
-##Test h2 text
+## Test h2 text
 
 Hello `code` vot takie dela
 
