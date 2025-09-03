@@ -8,94 +8,116 @@ body {
   padding: 0;
 }
 
-/* Шапка */
-.site-header {
+/* Контейнер основной страницы: контент + сайдбар */
+.container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background: #2e2e3f; /* тёмный фон шапки */
-  position: relative;
+  gap: 20px;
+  padding: 20px;
 }
 
-.site-header h1 a {
+/* Контент (сетка постов) */
+.content {
+  flex: 1;
+}
+
+/* Сетка постов: 2-3 карточки по центру на больших экранах */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Карточка поста */
+.post-card {
+  background: #2e2e3f;
+  color: #f5f5f5;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+}
+
+.post-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.post-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #00d8ff;
+}
+
+.post-card p {
+  flex: 1;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: #cfd8dc;
+}
+
+.read-more {
   text-decoration: none;
-  color: #00d8ff; /* яркий голубой */
-  font-size: 1.5rem;
+  color: #00d8ff;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-/* Меню */
-.menu {
-  position: relative;
+/* Теги внутри карточки */
+.post-tags {
+  text-align: right;
 }
 
-.menu-list {
-  display: flex;
-  gap: 15px;
+.post-tags a {
+  text-decoration: none;
+  color: #888;
+  margin-left: 5px;
+  font-size: 0.85rem;
+}
+
+/* Сайдбар с категориями (теги) */
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  background: #2e2e3f;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.sidebar h3 {
+  margin-bottom: 10px;
+  color: #00d8ff;
+}
+
+.sidebar ul {
   list-style: none;
 }
 
-.menu-list li a {
+.sidebar ul li {
+  margin-bottom: 5px;
+}
+
+.sidebar ul li a {
   text-decoration: none;
   color: #00d8ff;
-}
-
-/* Блок на главной странице */
-.home-intro {
-  max-width: 800px;
-  margin: 80px auto;
-  padding: 30px;
-  text-align: center;
-  background: #2e2e3f;       /* чуть светлее для выделения */
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-}
-
-.home-intro h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #00d8ff;
-}
-
-.home-intro p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #cfd8dc;
-  margin-bottom: 15px;
-}
-
-.home-intro a {
-  color: #00d8ff;
-  text-decoration: underline;
-}
-
-/* Бургер меню */
-.burger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
 }
 
 /* Адаптивность */
 @media (max-width: 900px) {
-  .menu-list {
-    display: none;
+  .container {
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #2e2e3f;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   }
-
-  .menu-list.show {
-    display: flex;
+  .sidebar {
+    width: 100%;
+    margin-top: 20px;
   }
-
-  .burger {
-    display: block;
-    color: #00d8ff;
+  .posts-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
