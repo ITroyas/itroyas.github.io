@@ -22,4 +22,7 @@ echo hi
 ```python
 print("Hello!")
 ```
+> hello
+>> hello
+>>> hello
 
