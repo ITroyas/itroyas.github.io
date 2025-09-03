@@ -103,7 +103,7 @@ body {
 }
 
 .post-card h2 a {
-  color: #50fa7b;
+  color: #d2d2d2;
   text-decoration: none;
   border-bottom: 2px solid #50fa7b;
 }
@@ -111,7 +111,6 @@ body {
 .post-card h2 a:hover {
   background: #50fa7b;
   color: #0d1117;
-  border-radius: 4px;
 }
 
 .post-card time {
