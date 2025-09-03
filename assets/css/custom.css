@@ -51,7 +51,9 @@ body {
 
 /* Контент */
 .content {
-  flex: 1;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 /* Главная */
