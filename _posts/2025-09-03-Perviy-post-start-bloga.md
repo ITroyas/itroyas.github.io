@@ -7,12 +7,19 @@ tags: [python, bash]
 image: /assets/images/paplay.png
 ---
 
+##Test h2 text
+
+Hello `code` vot takie dela
+
+```shell
+echo hello
+```
+
 ```bash
-## пример скрипта
-```echo "Hello, GitHub Pages!"```
+echo hi
 ```
 
 ```python
-print("Привет, мир!")
-<img src="/assets/images/paplay.png" alt="Описание 1" class="post-image">
+print("Hello!")
 ```
+
