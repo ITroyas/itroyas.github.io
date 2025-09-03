@@ -14,5 +14,5 @@ image: /assets/images/paplay.png
 sudo apt update
 sudo apt upgrade
 ```
-> [!SHELL]
+> [!TIP]
 > Advises about risks or negative outcomes of certain actions.
