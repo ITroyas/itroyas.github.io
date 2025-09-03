@@ -166,7 +166,7 @@ body {
 
 /* Пост внутри */
 .post-content {
-  max-width: 60%;
+  max-width: 50%;
   margin: 40px auto;
   background: #161b22;
   padding: 30px;
