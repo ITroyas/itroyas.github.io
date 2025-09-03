@@ -173,7 +173,7 @@ body {
 /* Адаптив */
 @media (max-width: 900px) {
   .post-content {
-    max-width: 90%;
+    max-width: 80%;
     margin: 20px auto;
     padding: 15px;
     font-size: 0.95rem;
