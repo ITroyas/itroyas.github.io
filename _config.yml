@@ -1,0 +1,19 @@
+title: "Блог Troyas"
+description: "Инструкции, скрипты, заметки по IT"
+theme: jekyll-theme-minimal
+
+# Локаль/язык
+lang: ru
+
+# Подсветка кода (Rouge — дефолт)
+markdown: kramdown
+highlighter: rouge
+
+# Плагины, которые поддерживает GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Соц. ссылки (пример)
+github_username: your-github
