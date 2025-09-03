@@ -1,10 +1,9 @@
 ---
 layout: default
 title: Блог
+show_sidebar: true
 permalink: /blog/
 ---
-
-# Все статьи
 
 <div class="posts-grid">
 {% for post in site.posts %}
@@ -25,3 +24,4 @@ permalink: /blog/
   </div>
 {% endfor %}
 </div>
+
