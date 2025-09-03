@@ -6,28 +6,24 @@
   <title>{{ page.title }} — ITroyas</title>
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 </head>
-  
-
-
 <body>
   <header class="site-header">
-  <h1><a href="{{ '/' | relative_url }}">ITroyas</a></h1>
-
-  <nav class="menu">
-    <ul class="menu-list">
-      <li><a href="{{ '/' | relative_url }}">Главная</a></li>
-      <li><a href="{{ '/blog/' | relative_url }}">Блог</a></li>
-      <li><a href="https://t.me/itroyas" target="_blank">Telegram</a></li>
-    </ul>
-    <div class="burger" id="burger">&#9776;</div>
-  </nav>
-</header>
-
+    <h1><a href="{{ '/' | relative_url }}">ITroyas</a></h1>
+    <nav class="menu">
+      <ul class="menu-list">
+        <li><a href="{{ '/' | relative_url }}">Главная</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">Блог</a></li>
+        <li><a href="https://t.me/yourhandle" target="_blank">Telegram</a></li>
+      </ul>
+      <div class="burger" id="burger">&#9776;</div>
+    </nav>
+  </header>
 
   <div class="container">
     <main class="content">
       {{ content }}
     </main>
+    {% if page.show_sidebar %}
     <aside class="sidebar">
       <h3>Теги</h3>
       <ul>
@@ -37,6 +33,7 @@
         {% endfor %}
       </ul>
     </aside>
+    {% endif %}
   </div>
 
   <footer class="site-footer">
@@ -44,12 +41,12 @@
   </footer>
 
   <script>
-  const burger = document.getElementById('burger');
-  const menuList = document.querySelector('.menu-list');
-
-  burger.addEventListener('click', () => {
-    menuList.classList.toggle('show');
-  });
-</script>
+    // Бургер-меню
+    const burger = document.getElementById('burger');
+    const menuList = document.querySelector('.menu-list');
+    burger.addEventListener('click', () => {
+      menuList.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
