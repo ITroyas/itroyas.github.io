@@ -1,7 +1,7 @@
 /* Общий фон */
 body {
-  background: #2c3e50;
-  color: #f5f5f5;
+  background: #0d1117;
+  color: #c9d1d9;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: #1f2a38;
+  background: #161b22;
 }
 
 .logo a {
@@ -79,7 +79,7 @@ body {
 
 /* Карточка статьи */
 .post-card {
-  background: #34495e;
+  background: #161b22;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.25);
@@ -127,11 +127,28 @@ body {
 .sidebar {
   width: 200px;
   flex-shrink: 0;
-  background: #34495e;
+  background: #161b22;
   padding: 15px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+/* Стили GitHub для кода */
+pre, code {
+  font-family: "Fira Code", monospace;
+  background: #161b22;
+  color: #c9d1d9;
+  padding: 10px;
+  border-radius: 6px;
+  display: block;
+  overflow-x: auto;
+}
+
+/* Цвета для синтаксиса */
+.highlight .k { color: #ff7b72; }  /* ключевые слова */
+.highlight .s { color: #a5d6ff; }  /* строки */
+.highlight .c { color: #8b949e; }  /* комментарии */
+
 
 /* Адаптивность */
 @media (max-width: 900px) {
