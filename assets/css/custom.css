@@ -208,35 +208,123 @@ body {
   }
 }
 
-.post-content h1,
-.post-content h2,
+/* === Заголовки === */
+.post-content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #50fa7b;
+  padding-bottom: 5px;
+}
+.post-content h2 {
+  font-size: 1.6rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #50fa7b;
+}
 .post-content h3 {
-  color: #c9d1d9;
+  font-size: 1.3rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #8be9fd;
 }
 
+/* === Параграфы === */
 .post-content p {
-  line-height: 1.6;
-  font-size: 1rem;
+  margin-bottom: 15px;
 }
 
+/* === Ссылки === */
+.post-content a {
+  color: #50fa7b;
+  text-decoration: underline;
+}
+.post-content a:hover {
+  background: #50fa7b;
+  color: #0d1117;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 0 3px;
+}
+
+/* === Код и блоки кода === */
 .post-content pre {
   background: #0d1117;
+  color: #f8f8f2;
   padding: 15px;
   border-radius: 8px;
   overflow-x: auto;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
 }
-
 .post-content code {
   background: #161b22;
+  color: #f8f8f2;
   padding: 2px 5px;
   border-radius: 4px;
+  font-size: 0.9rem;
 }
 
+/* === Цитаты === */
 .post-content blockquote {
   border-left: 3px solid #50fa7b;
-  padding-left: 10px;
+  padding-left: 12px;
+  margin-left: 0;
+  margin-right: 0;
   color: #8b949e;
   font-style: italic;
+  background: #1b1f26;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+
+/* === Списки === */
+.post-content ul,
+.post-content ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+.post-content li {
+  margin-bottom: 5px;
+}
+
+/* === Изображения === */
+.post-content img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+/* === Таблицы === */
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.post-content th,
+.post-content td {
+  border: 1px solid #50fa7b;
+  padding: 8px;
+  text-align: left;
+}
+.post-content th {
+  background: #1b1f26;
+}
+
+/* === Горизонтальная линия === */
+.post-content hr {
+  border: 0;
+  height: 1px;
+  background: #50fa7b;
+  margin: 30px 0;
+}
+
+/* === Стили для встроенных HTML элементов === */
+.post-content strong {
+  color: #ff79c6;
+}
+.post-content em {
+  color: #f1fa8c;
 }
 
 
