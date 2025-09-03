@@ -9,6 +9,17 @@
 <body>
   <header class="site-header">
     <h1><a href="{{ '/' | relative_url }}">ITroyas</a></h1>
+
+    <!-- Бургер-меню для мобильных -->
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="burger">&#9776;</label>
+    <nav class="menu">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Главная</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">Блог</a></li>
+        <li><a href="https://t.me/yourhandle" target="_blank">Telegram</a></li>
+      </ul>
+    </nav>
   </header>
 
   <div class="container">
