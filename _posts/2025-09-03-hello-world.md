@@ -11,4 +11,4 @@ image: /assets/images/paplay.png
 # пример скрипта
 ```echo "Hello, GitHub Pages!"```
 print("Привет, мир!")
-![Описание картинки 1](/assets/images/paplay.png)
+<img src="/assets/images/paplay.png" alt="Описание 1" class="post-image">
