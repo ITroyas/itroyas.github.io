@@ -21,7 +21,6 @@
     </nav>
   </header>
 
-  <!-- Контент + сайдбар -->
   <div class="container">
     <main class="content">
       {{ content }}
@@ -44,18 +43,15 @@
     © {{ site.time | date: "%Y" }} ITroyas
   </footer>
 
-  <!-- JS для бургер-меню -->
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const burger = document.getElementById('burger');
-  const menuList = document.querySelector('.menu-list');
-
-  burger.addEventListener('click', function() {
-    menuList.classList.toggle('show');
-  });
-});
-</script>
-
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const burger = document.getElementById('burger');
+      const menuList = document.querySelector('.menu-list');
+      burger.addEventListener('click', function() {
+        menuList.classList.toggle('show');
+      });
+    });
+  </script>
 
 </body>
 </html>
