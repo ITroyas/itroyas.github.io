@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Первый пост: старт блога"
-date: 2025-03-09
+date: 2025-09-03
 categories: [Bash, Python]
 tags: [python, bash]
 image: /assets/images/paplay.png
