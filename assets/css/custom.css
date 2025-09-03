@@ -209,7 +209,7 @@ body {
 }
 
 /* Для очень больших экранов */
-@media (min-width: 1800px) {
+@media (min-width: 2200px) {
   .post-content {
     max-width: 40%;
   }
@@ -219,7 +219,7 @@ body {
   }
 
   .logo a{
-    font-size: 3.5rem;
+    font-size: 3.4rem;
 
   .menu a{
     font-size: 1.6rem;
