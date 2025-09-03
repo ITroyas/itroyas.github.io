@@ -1,16 +1,26 @@
+/* Общий фон и текст */
+body {
+  background: #1e1e2f; /* тёмно-синий фон */
+  color: #f5f5f5;      /* светлый текст */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
 /* Шапка */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background: #f7f7f7;
+  background: #2e2e3f; /* тёмный фон шапки */
   position: relative;
 }
 
 .site-header h1 a {
   text-decoration: none;
-  color: #333;
+  color: #00d8ff; /* яркий голубой */
   font-size: 1.5rem;
 }
 
@@ -27,7 +37,7 @@
 
 .menu-list li a {
   text-decoration: none;
-  color: #1e90ff;
+  color: #00d8ff;
 }
 
 /* Блок на главной странице */
@@ -36,31 +46,30 @@
   margin: 80px auto;
   padding: 30px;
   text-align: center;
-  background: #fff;
+  background: #2e2e3f;       /* чуть светлее для выделения */
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
 .home-intro h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #1e90ff;
+  color: #00d8ff;
 }
 
 .home-intro p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #555;
+  color: #cfd8dc;
   margin-bottom: 15px;
 }
 
 .home-intro a {
-  color: #1e90ff;
+  color: #00d8ff;
   text-decoration: underline;
 }
 
-
-/* Бургер по умолчанию скрыт */
+/* Бургер меню */
 .burger {
   display: none;
   font-size: 2rem;
@@ -75,10 +84,10 @@
     position: absolute;
     top: 60px;
     right: 0;
-    background: #f7f7f7;
+    background: #2e2e3f;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   }
 
   .menu-list.show {
@@ -87,5 +96,6 @@
 
   .burger {
     display: block;
+    color: #00d8ff;
   }
 }
