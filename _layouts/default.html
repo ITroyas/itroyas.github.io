@@ -1,22 +1,19 @@
 <!doctype html>
-<html lang="{{ site.lang | default: 'ru' }}">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }} — {{ site.title }}</title>
-    {%- seo -%}
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
   </head>
   <body>
     <header>
-      <a href="{{ '/' | relative_url }}"><strong>{{ site.title }}</strong></a> ·
-      <a href="{{ '/about/' | relative_url }}">Обо мне</a> ·
-      <a href="{{ '/tags/' | relative_url }}">Теги</a>
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
     </header>
     <main>
       {{ content }}
     </main>
     <footer>
-      <p>© {{ site.time | date: '%Y' }} · <a href="https://github.com/username">GitHub</a></p>
+      © {{ site.time | date: "%Y" }}
     </footer>
   </body>
 </html>
