@@ -45,13 +45,17 @@
   </footer>
 
   <!-- JS для бургер-меню -->
-  <script>
-    const burger = document.getElementById('burger');
-    const menuList = document.querySelector('.menu-list');
-    burger.addEventListener('click', () => {
-      menuList.classList.toggle('show');
-    });
-  </script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const burger = document.getElementById('burger');
+  const menuList = document.querySelector('.menu-list');
+
+  burger.addEventListener('click', function() {
+    menuList.classList.toggle('show');
+  });
+});
+</script>
+
 
 </body>
 </html>
