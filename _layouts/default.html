@@ -7,25 +7,29 @@
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 </head>
 <body>
+
+  <!-- Шапка -->
   <header class="site-header">
-    <h1><a href="{{ '/' | relative_url }}">ITroyas</a></h1>
+    <h1 class="logo"><a href="{{ '/' | relative_url }}">ITroyas</a></h1>
     <nav class="menu">
       <ul class="menu-list">
         <li><a href="{{ '/' | relative_url }}">Главная</a></li>
         <li><a href="{{ '/blog/' | relative_url }}">Блог</a></li>
-        <li><a href="https://t.me/yourhandle" target="_blank">Telegram</a></li>
+        <li><a href="{{ '/categories/' | relative_url }}">Категории</a></li>
       </ul>
       <div class="burger" id="burger">&#9776;</div>
     </nav>
   </header>
 
+  <!-- Контент + сайдбар -->
   <div class="container">
     <main class="content">
       {{ content }}
     </main>
+
     {% if page.show_sidebar %}
     <aside class="sidebar">
-      <h3>Теги</h3>
+      <h3>Категории</h3>
       <ul>
         {% assign alltags = site.tags | sort %}
         {% for tag in alltags %}
@@ -40,13 +44,14 @@
     © {{ site.time | date: "%Y" }} ITroyas
   </footer>
 
+  <!-- JS для бургер-меню -->
   <script>
-    // Бургер-меню
     const burger = document.getElementById('burger');
     const menuList = document.querySelector('.menu-list');
     burger.addEventListener('click', () => {
       menuList.classList.toggle('show');
     });
   </script>
+
 </body>
 </html>
