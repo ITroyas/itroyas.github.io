@@ -7,8 +7,12 @@ tags: [python, bash]
 image: /assets/images/paplay.png
 ---
 
-`bash
+```bash
 ## пример скрипта
 ```echo "Hello, GitHub Pages!"```
+```
+
+```python
 print("Привет, мир!")
 <img src="/assets/images/paplay.png" alt="Описание 1" class="post-image">
+```
