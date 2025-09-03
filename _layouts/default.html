@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} — ITroyas</title>
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="{{ '/' | relative_url }}">ITroyas</a></h1>
+  </header>
+
+  <div class="container">
+    <main class="content">
+      {{ content }}
+    </main>
+    <aside class="sidebar">
+      <h3>Теги</h3>
+      <ul>
+        {% assign alltags = site.tags | sort %}
+        {% for tag in alltags %}
+          <li><a href="{{ '/tags/' | relative_url }}#{{ tag[0] }}">#{{ tag[0] }}</a></li>
+        {% endfor %}
+      </ul>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    © {{ site.time | date: "%Y" }} ITroyas
+  </footer>
+</body>
+</html>
