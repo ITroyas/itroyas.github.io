@@ -1,0 +1,461 @@
+/* === Общие === */
+body {
+  background: #272727;
+  color: #e0e0e0;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+  background-color: #50fa7b;
+  color: #000;
+}
+
+
+/* Подчеркивание для ссылок */
+a:not(.read-more)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  background: #50fa7b;
+}
+
+a:not(.read-more):hover::after {
+  width: 100%;
+}
+
+/* === Основной контейнер === */
+.site-wrapper {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+@media (max-width: 800px) {
+  .site-wrapper {
+    max-width: 90%;
+  }
+  .header-container {
+        display: flex;
+        justify-content: space-between; /* логотип слева, бургер справа */
+        align-items: center;
+        position: relative;
+    }
+
+    /* Скрываем обычное меню */
+  .header-nav ul {
+        display: none;
+        flex-direction: column;
+        background: #161b22;
+        position: absolute;
+        top: 60px;
+        right: 0;  /* справа экрана */
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+    }
+
+    .burger {
+        display: flex;          /* показываем бургер */
+        margin-left: auto;      /* подталкиваем к правому краю */
+    }
+
+	.burger div {
+		
+		background-color: #e0e0e0;
+	}
+
+}
+
+/* === Шапка === */
+.site-header {
+  padding: 10px 15px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title-link {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e0e0e0;
+  border-bottom: 2px solid #50fa7b;
+}
+
+.site-title-link:hover {
+  background: #50fa7b;
+  color: #000;
+  background-color: #50fa7b;
+}
+
+.header-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav a {
+  color: #e0e0e0;
+  font-size: 1rem;
+  margin-top: 15px;
+  padding: 5px 10px;
+  border-bottom: 2px solid #50fa7b;
+}
+
+.header-nav a:hover {
+  background: #50fa7b;
+  color: #000;
+  background-color: #50fa7b;
+}
+
+/* === Бургер === */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background: #50fa7b;
+}
+
+@media (max-width: 860px) {
+  .header-nav ul {
+    display: none;
+    text-align: center;
+    flex-direction: column;
+    background: #161b22;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    border: 1px solid #50fa7b;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .header-nav ul.active {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+/* === Список постов === */
+.post-preview {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 20px;
+}
+
+.post-title a {
+  font-size: 1.6rem;
+  color: #e0e0e0;
+  border-bottom: 2px solid #50fa7b;
+  padding-bottom: 1px;
+}
+
+.post-title a:hover {
+  background: #50fa7b;
+  color: #000;
+}
+
+/* Дата поста */
+.post-date {
+  font-size: 0.9rem;
+  margin: 0 auto;
+  color: #aaa;
+}
+
+/* Кнопка Читать дальше */
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #50fa7b;
+  border: 1px solid #50fa7b;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  background: #50fa7b;
+  color: #000;
+}
+
+/* === Футер === */
+.site-footer {
+  text-align: center;
+  border-top: 2px solid #50fa7b;
+  padding: 20px 0;
+  margin-top: 40px;
+  color: #888;
+}
+
+/* === Контент поста === */
+.post-content {
+  background: #161b22;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.post-content a{
+    color: #e0e0e0;
+    border-bottom: 2px solid #50fa7b;
+}
+
+.post-content a:hover {
+	color:#000000;
+	
+}
+
+/* Заголовки */
+.post-content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #50fa7b;
+  padding-bottom: 5px;
+}
+.post-content h2 {
+  font-size: 1.6rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #50fa7b;
+}
+
+
+
+/*  Блоки кода */
+ .post-content pre {
+    background: #0d1117;      /* фон как у тебя */
+    color: #f8f8f2;           /* цвет текста */
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;         /* добавляем горизонтальную прокрутку */
+    white-space: pre-wrap;    /* перенос длинных строк */
+    word-break: break-word;   /* перенос слов, если нужно */
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+	position: relative;
+} 
+
+/* Плашка языка */
+.post-content pre::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #50fa7b; /* зелёная полоска */
+    color: #0d1117;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-bottom-left-radius: 6px;
+    text-transform: uppercase;
+}
+
+/* Внутренний код */
+.post-content code {
+    background: #161b22;
+    color: #f8f8f2;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: pre-wrap;    /* для inline-кода, если нужно */
+}
+
+pre code::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #50fa7b;
+    color: #0d1117;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-bottom-left-radius: 6px;
+    text-transform: uppercase;
+}
+
+
+/* Определяем конкретные языки */
+pre code.language-bash::before { content: "BASH"; }
+pre code.language-python::before { content: "PYTHON"; }
+pre code.language-powershell::before { content: "POWERSHELL"; }
+pre code.language-shell::before { content: "SHELL"; }
+
+
+
+
+
+
+
+
+
+.homepage h4 {
+	margin-bottom: 4em;
+}
+
+
+/* links and job */
+.company {
+	color: #5b1fcc;
+}
+
+/* Ссылки на Telegram в тексте */
+.tg-link {
+    color: inherit;                 /* наследует цвет текста */
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;                       /* расстояние между иконкой и текстом */
+    border-bottom: 2px solid #50fa7b;
+    padding-bottom: 1px;
+}
+
+/* При наведении — зелёный фон и чёрный текст */
+.tg-link:hover {
+    background-color: #50fa7b;
+    color: #000;
+	border-radius: 2px;
+}
+
+
+
+.all-posts-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.all-posts-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #50fa7b;
+    padding-bottom: 5px;
+}
+
+.all-posts-list li a.post-link {
+    text-decoration-color: #50fa7b;
+	font-size: 1.2em;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.all-posts-list li a.post-link:hover {
+    background-color: #50fa7b;
+    color: #000;
+}
+
+.all-posts-list li .post-date {
+    color: #8b949e;
+    font-size: 0.9rem;
+}
+
+
+.post-categories {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.post-categories a {
+    text-decoration: underline;
+    text-decoration-color: #50fa7b;
+    color: #e0e0e0;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.post-categories a:hover {
+    background-color: #50fa7b;
+    color: #000;
+    border-radius: 2px;
+}
+
+/* Страница категорий */
+.terms-page {
+    max-width: 65%;
+    margin: 0;y
+    text-align: left;
+}
+
+.terms-page h2 {
+    color: #e0e0e0;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.terms-list {
+    list-style: none; /* убираем точки */
+    padding: 0;
+    margin: 0;
+}
+
+.terms-list li {
+    font-size: 1.2em;
+}
+
+.terms-list a {
+    color: #e0e0e0; /* белый текст */
+	border-bottom: 2px solid #50fa7b;
+    transition: background 0.3s, color 0.3s;
+}
+
+.terms-list a:hover {
+    background: #50fa7b; /* зелёный фон при наведении */
+    color: #000; /* чёрный текст при наведении */
+}
+
+
+/* VIDEO */
+
+.video-container {
+    position: relative;
+    width: 100vw;
+	max-width: 100%;
+	margin-left: calc(-50vw + 50%);
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+
+.post-footer {
+	margin-top: 10px;
+}

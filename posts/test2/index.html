@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru-ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test2 | ITroyas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <header class="site-header">
+    <div class="header-container">
+        <div class="header-title">
+            <h1>
+				<a href="http://localhost:1313/" class="site-title-link">
+					ITroyas
+				</a>
+			</h1>
+        </div>
+
+	    <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+		
+        <nav class="header-nav">
+            <ul>
+                
+                <li>
+					<a href="/all-notes/">
+						Все статьи
+					</a>
+				</li>
+                
+                <li>
+					<a href="/categories/">
+						Категории
+					</a>
+				</li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+<script>
+function toggleMenu() {
+    const menu = document.querySelector('.header-nav ul');
+    menu.classList.toggle('active');
+}
+</script>
+
+        
+        <main class="main-content">
+            
+<article class="post-single">
+    <header class="post-header">
+        <h1 class="post-title">Test2</h1>
+        <div class="post-meta">
+            <time datetime="2025-09-06">
+                Опубликовано: 06.09.2025
+            </time>
+        </div>
+    </header>
+
+    <div class="post-content">
+        
+    </div>
+
+<div class="post-categories">
+    Категории:
+    
+</div>
+
+    <footer class="post-footer">
+        <a href="http://localhost:1313/" class="back-to-home">← Назад к статьям</a>
+    </footer>
+</article>
+
+        </main>
+        
+        <footer class="site-footer">
+    <div class="footer-container">
+        <p>&copy; 2025 ITroyas <br>Создано со смыслом</p>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
