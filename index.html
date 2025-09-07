@@ -13,7 +13,7 @@
     <div class="header-container">
         <div class="header-title">
             <h1>
-				<a href="http://localhost:1313/" class="site-title-link">
+				<a href="{{ .Site.BaseURL }}" class="site-title-link">
 					ITroyas
 				</a>
 			</h1>
@@ -71,7 +71,7 @@ function toggleMenu() {
     
         
         <article class="post-preview">
-            <h2 class="post-title"><a href="http://localhost:1313/posts/welcome-post/"># welcome-post</a></h2>
+            <h2 class="post-title"><a href="{{ .Site.BaseURL }}/posts/welcome-post/"># welcome-post</a></h2>
 			   
 			<div class="post-categories">
     
@@ -86,11 +86,11 @@ function toggleMenu() {
                     Ну шо погнали
                 
             </div>
-            <a href="http://localhost:1313/posts/welcome-post/" class="read-more">Читать дальше</a>
+            <a href="{{ .Site.BaseURL }}/posts/welcome-post/" class="read-more">Читать дальше</a>
         </article>
         
         <article class="post-preview">
-            <h2 class="post-title"><a href="http://localhost:1313/posts/testpost/"># Новый пост</a></h2>
+            <h2 class="post-title"><a href="{{ .Site.BaseURL }}/posts/testpost/"># Новый пост</a></h2>
 			   
 			<div class="post-categories">
     
@@ -105,7 +105,7 @@ function toggleMenu() {
                     Краткое описание поста для SEO и превью
                 
             </div>
-            <a href="http://localhost:1313/posts/testpost/" class="read-more">Читать дальше</a>
+            <a href="{{ .Site.BaseURL }}/posts/testpost/" class="read-more">Читать дальше</a>
         </article>
         
     
