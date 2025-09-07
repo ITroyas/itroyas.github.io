@@ -1,108 +1,0 @@
-<!DOCTYPE html>
-<html lang="ru-ru">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>first post | ITroyas</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <div class="site-wrapper">
-        <header class="site-header">
-    <div class="header-container">
-        <div class="header-title">
-            <h1>
-				<a href="http://localhost:1313/" class="site-title-link">
-					ITroyas
-				</a>
-			</h1>
-        </div>
-
-	    <div class="burger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-
-		
-        <nav class="header-nav">
-            <ul>
-                
-                <li>
-					<a href="/all-notes/">
-						Все статьи
-					</a>
-				</li>
-                
-                <li>
-					<a href="/categories/">
-						Категории
-					</a>
-				</li>
-                
-            </ul>
-        </nav>
-    </div>
-</header>
-
-
-
-<script>
-function toggleMenu() {
-    const menu = document.querySelector('.header-nav ul');
-    menu.classList.toggle('active');
-}
-</script>
-
-        
-        <main class="main-content">
-            
-<article class="post-single">
-    <header class="post-header">
-        <h1 class="post-title">first post</h1>
-        <div class="post-meta">
-            <time datetime="2025-09-06">
-                Опубликовано: 06.09.2025
-            </time>
-        </div>
-    </header>
-
-    <div class="post-content">
-        <h3 id="first-post">first post</h3>
-<p>_Ga=d,d=A\[?25l[?7l[14t[?25h[?7h[?2004h[?1049h[1;48r(B[m[4l[?7h[39;49m[?1h[?1h[?25l[39;49m(B[m[H[2J[46;66H(B[0;7m[ Reading&hellip; ](B[m[46;65H(B[0;7m[ Read 41 lines ](B[m[H(B[0;7m  GNU nano 7.2                                                        newpost.sh                                                                 [1;144H(B[m[47d(B[0;7m^G(B[m Help[47;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[47;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[47;113H(B[0;7mM-A(B[m Set Mark    (B[0;7mM-](B[m To Bracket[48d(B[0;7m^X(B[m Exit[48;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[48;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[48;113H(B[0;7mM-6(B[m Copy[48;129H(B[0;7m^Q(B[m Where Was[2d[36m#!/bin/bash[4d[32mif[39;49m(B[m [32m[[39;49m(B[m (B[0;1m[31m$#[39;49m(B[m [32m-lt[39;49m(B[m 2 [32m];[39;49m(B[m [32mthen[5;5H(B[0;1m[34mecho[39;49m(B[m (B[0;1m[33m&quot;Использование: $0 &quot;Заголовок поста&quot; &quot;Категория1, 2&quot;&ldquo;[6;5H(B[0m[32mexit[39;49m(B[m 1[7d[32mfi[9d[39;49m(B[mTITLE[32m=(B[0;1m[33m&rdquo;$1&quot;[10d[39;49m(B[mCATEGORIES[32m=(B[0;1m[33m&quot;$2&quot;[11d[39;49m(B[mSUMMARY[32m=(B[0;1m[33m&quot;$3&quot;[13d[39;49m(B[mFILENAME[32m=$((B[0;1m[34mecho[39;49m(B[m (B[0;1m[33m&quot;$TITLE&quot;[39;49m(B[m [32m|[39;49m(B[m tr (B[0;1m[33m&rsquo;[:upper:]&lsquo;[39;49m(B[m (B[0;1m[33m&rsquo;[:lower:]&lsquo;[39;49m(B[m [32m|[39;49m(B[m (B[0;1m[34msed[39;49m(B[m (B[0;1m[33m&rsquo;s/ /-/g&rsquo;(B[0m[32m)[14d[39;49m(B[mFILEPATH[32m=[39;49m(B[m~/my-site/content/posts/(B[0;1m[31m$FILENAME[39;49m(B[m.md[16d[32mif[39;49m(B[m [32m[(B[0;1m[35m -f[39;49m(B[m (B[0;1m[33m&quot;$FILEPATH&quot;[39;49m(B[m [32m];[39;49m(B[m [32mthen[17;5H(B[0;1m[34mecho[39;49m(B[m (B[0;1m[33m&quot;File $FILEPATH yet ready!&ldquo;[18;5H(B[0m[32mexit[39;49m(B[m 1[19d[32mfi[21d(B[0;1m[34mcat[39;49m(B[m [32m&laquo;[39;49m(B[mEOL [32m&gt;[39;49m(B[m (B[0;1m[33m&rdquo;$FILEPATH&quot;[22d[39;49m(B[m&mdash;[23dtitle[32m:[39;49m(B[m (B[0;1m[33m&quot;$TITLE&quot;[24d[39;49m(B[mdate[32m:[39;49m(B[m [32m$([39;49m(B[mdate +(B[0;1m[33m&quot;%Y-%m-%dT%H:%M:%S%z&quot;(B[0m[32m)[25d[39;49m(B[mdraft[32m:[39;49m(B[m true[26dcategories[32m:[39;49m(B[m [32m[$((B[0;1m[34mecho[39;49m(B[m (B[0;1m[33m&quot;$CATEGORIES&quot;[39;49m(B[m [32m|(B[0;1m[34msed[39;49m(B[m (B[0;1m[33m&rsquo;s/,/, /g&rsquo;(B[0m[32m)][27d[39;49m(B[msummary[32m:[39;49m(B[m (B[0;1m[33m&quot;$SUMMARY&quot;[28d[39;49m(B[m&mdash;[31d[36m### $TITLE[33d[32m<code>[39;49m(B[mbash[34dpwd[35dhostname(B[0;1m[35m -I[36d[39;49m(B[mping(B[0;1m[35m -c[39;49m(B[m 4 8.8.8.8[37d[32m</code>[38d[39;49m(B[mhi[40dEOL[42d(B[0;1m[34mecho[39;49m(B[m (B[0;1m[33m&quot;New post is created: $FILEPATH&quot;[2d[39;49m(B[m[?12h[?25h[48;1H[?1049l[?1l[?2004l/home/troyas/scripts
-192.168.1.33 172.17.0.1 10.0.0.13 fdd6:5c5e:3483:0:2989:4266:f932:b15b fdd6:5c5e:3483:0:fbfd:33e4:9474:d3c5
-PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
-64 bytes from 8.8.8.8: icmp_seq=1 ttl=107 time=46.2 ms
-64 bytes from 8.8.8.8: icmp_seq=2 ttl=107 time=46.4 ms
-64 bytes from 8.8.8.8: icmp_seq=3 ttl=107 time=45.8 ms
-64 bytes from 8.8.8.8: icmp_seq=4 ttl=107 time=46.5 ms</p>
-<p>&mdash; 8.8.8.8 ping statistics &mdash;
-4 packets transmitted, 4 received, 0% packet loss, time 3004ms
-rtt min/avg/max/mdev = 45.845/46.227/46.471/0.238 ms
-hi</p>
-
-    </div>
-
-<div class="post-categories">
-    Категории:
-    
-        <a href="/categories/bash">Bash</a>
-    
-</div>
-
-    <footer class="post-footer">
-        <a href="http://localhost:1313/" class="back-to-home">← Назад к статьям</a>
-    </footer>
-</article>
-
-        </main>
-        
-        <footer class="site-footer">
-    <div class="footer-container">
-        <p>&copy; 2025 ITroyas <br>Создано со смыслом</p>
-    </div>
-</footer>
-
-    </div>
-</body>
-</html>
