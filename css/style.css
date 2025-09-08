@@ -160,6 +160,13 @@ a:not(.read-more):hover::after {
   .burger {
     display: flex;
   }
+
+	img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* по центру */
+}
 }
 
 /* === Список постов === */
