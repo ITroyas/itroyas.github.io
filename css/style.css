@@ -73,9 +73,14 @@ a:not(.read-more):hover::after {
     }
 
 	.burger div {
-		
 		background-color: #e0e0e0;
 	}
+	img {
+  		max-width: 100%;
+		height: auto;
+	    display: block;
+	    margin: 0 auto; 
+}
 
 }
 
