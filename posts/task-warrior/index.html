@@ -1,0 +1,52 @@
+<!doctype html><html lang=ru-ru><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Taskwarrior. Обзор и настройка | ITroyas</title><link rel=stylesheet href=/css/style.css></head><body><div class=site-wrapper><header class=site-header><div class=header-container><div class=header-title><h1><a href=https://itroyas.ru/ class=site-title-link>ITroyas</a></h1></div><div class=burger onclick=toggleMenu()><div></div><div></div><div></div></div><nav class=header-nav><ul><li><a href=/all-notes/>Все статьи</a></li><li><a href=/categories/>Категории</a></li></ul></nav></div></header><script>function toggleMenu(){const e=document.querySelector(".header-nav ul");e.classList.toggle("active")}</script><main class=main-content><article class=post-single><header class=post-header><h1 class=post-title>Taskwarrior. Обзор и настройка</h1><div class=post-meta><time datetime=2025-09-06>Опубликовано: 06.09.2025</time></div></header><div class=post-content><h1 id=taskwarrior-управление-задачами-из-терминала-как-искусство>Taskwarrior: управление задачами из терминала как искусство</h1><h2 id=что-и-зачем-нужен-taskwarrior>Что и зачем нужен Taskwarrior</h2><blockquote><p>Taskwarrior — это мощный инструмент для управления задачами прямо из терминала.
+В отличие от громоздких GUI-органайзеров, он легковесен, гибок и идеально подходит для тех, кто проводит много времени в консоли.</p></blockquote><p>Почему это удобно?</p><ul><li>Работает без графического интерфейса — быстро и везде, где есть терминал.</li><li>Хранит данные локально (никаких лишних синхронизаций).</li><li>Поддерживает теги, проекты, пользовательские поля, фильтры, кастомные отчеты.</li><li>Гибко настраивается под ваши потребности.</li></ul><hr><h2 id=установка-taskwarrior>Установка Taskwarrior</h2><p>На Linux всё просто:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sudo apt update
+</span></span><span class=line><span class=cl>sudo apt install taskwarrior
+</span></span></code></pre></div><p>Чтобы была актуаьная версия идем на <a href=https://taskwarrior.org/>официальный сайт</a>.</p><hr><h2 id=первый-запуск-и-впечатления>Первый запуск и впечатления</h2><p>После установки выполним:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>task list
+</span></span><span class=line><span class=cl>task add 
+</span></span></code></pre></div><p><img src="https://github.com/ITroyas/site-images/blob/main/tw1.png?raw=true" alt=Картинка></p><blockquote><p>По умолчанию интерфейс выглядит сухо и непонятно. Минимум полезной информации, неудобно ориентироваться.</p></blockquote><hr><h2 id=кастомизация-taskwarrior>Кастомизация Taskwarrior</h2><p>Вот тут начинается магия. Taskwarrior позволяет настраивать всё: цвета, колонки, пользовательские поля, отчёты.
+Для кастомизации откроем конфиг:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>nano ~/.taskrc
+</span></span></code></pre></div><p>Внутри увидим закомментированные строки, вот эти, к примеру, отвечают за цветовую палитру:</p><pre tabindex=0><code>#include solarized-dark-256.theme
+#include solarized-light-256.theme
+#include no-color.theme
+</code></pre><p>Можно подключить готовые темы или создать свою, но прекола в этом не особо</p><h3 id=изменим-под-себя>Изменим под себя</h3><p>По умолчанию вывод малоинформативный. Сделаем свой кастомный отчёт:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=c1># Кастомный отчет</span>
+</span></span><span class=line><span class=cl>report.list.columns<span class=o>=</span>id,project,description,check
+</span></span><span class=line><span class=cl>report.list.labels<span class=o>=</span>ИД,ПРОЕКТ,ОПИСАНИЕ,СТАТУС
+</span></span><span class=line><span class=cl>report.list.sort<span class=o>=</span>id+
+</span></span></code></pre></div><p>Теперь в выводе будет:
+ID - просто порядковый номер
+ПРОЕКТ - указываем к чему относится задача
+ОПИСАНИЕ - тут все понятно
+СТАТУС - ожидание, в процессе, выполнено</p><h3 id=добавляем-пользовательское-поле>Добавляем пользовательское поле</h3><p>Создадим поле <code>check</code>, чтобы отслеживать статус задачи:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>uda.check.type<span class=o>=</span>string
+</span></span><span class=line><span class=cl>uda.check.label<span class=o>=</span>Статус
+</span></span><span class=line><span class=cl>uda.check.values<span class=o>=</span>wait,in_progress,done
+</span></span><span class=line><span class=cl>uda.check.default<span class=o>=</span><span class=nb>wait</span>
+</span></span></code></pre></div><p>Теперь у каждой задачи есть поле <code>check</code> с тремя состояниями:</p><ul><li><code>wait — ждет своего часа</code></li><li><code>in_progress — в процессе</code></li><li><code>done — выполнена</code></li></ul><h3 id=настраиваем-цвета>Настраиваем цвета</h3><p>Добавим цвета для статусов:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>color.uda.check.wait<span class=o>=</span>white
+</span></span><span class=line><span class=cl>color.uda.check.in_progress<span class=o>=</span>blue
+</span></span><span class=line><span class=cl>color.uda.check.done<span class=o>=</span>green
+</span></span></code></pre></div><hr><h3 id=итоговый-пример>Итоговый пример</h3><p>Вот так выглядят ласт строки <code>.taskrc</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=c1># Кастомный отчет</span>
+</span></span><span class=line><span class=cl>report.list.columns<span class=o>=</span>id,project,description,check
+</span></span><span class=line><span class=cl>report.list.labels<span class=o>=</span>ИД,ПРОЕКТ,ОПИСАНИЕ,СТАТУС
+</span></span><span class=line><span class=cl>report.list.sort<span class=o>=</span>id+
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Пользовательское поле</span>
+</span></span><span class=line><span class=cl>uda.check.type<span class=o>=</span>string
+</span></span><span class=line><span class=cl>uda.check.label<span class=o>=</span>Статус
+</span></span><span class=line><span class=cl>uda.check.values<span class=o>=</span>wait,in_progress,done
+</span></span><span class=line><span class=cl>uda.check.default<span class=o>=</span><span class=nb>wait</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Цвета для статусов</span>
+</span></span><span class=line><span class=cl>color.uda.check.wait<span class=o>=</span>white
+</span></span><span class=line><span class=cl>color.uda.check.in_progress<span class=o>=</span>blue
+</span></span><span class=line><span class=cl>color.uda.check.done<span class=o>=</span>green
+</span></span></code></pre></div><hr><h2 id=как-это-выглядит-теперь>Как это выглядит теперь</h2><p>Выполняем:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>task list
+</span></span></code></pre></div><p>И видим аккуратную таблицу с понятными колонками и цветами.</p><p><img src="https://github.com/ITroyas/site-images/blob/main/tw2.png?raw=true" alt=Итог></p><hr><h2 id=работа-с-задачами>Работа с задачами</h2><h3 id=добавляем-задачу>Добавляем задачу:</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>task add <span class=s2>&#34;Написать статью про Taskwarrior&#34;</span> project:Blog
+</span></span></code></pre></div><h3 id=меняем-статус>Меняем статус:</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>task &lt;ID&gt; modify check:in_progress
+</span></span></code></pre></div><h3 id=завершаем-задачу>Завершаем задачу:</h3><p>Такой код завершит и удалит задачу из списка</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>task &lt;ID&gt; <span class=k>done</span>
+</span></span></code></pre></div><h3 id=удаляем-задачу>Удаляем задачу:</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>task &lt;ID&gt; delete
+</span></span></code></pre></div><h3 id=удаляем-все-задачи-осторожно>Удаляем все задачи (ОСТОРОЖНО!):</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>task list delete
+</span></span></code></pre></div><hr><h2 id=фильтры-и-быстрый-поиск-задач>Фильтры и быстрый поиск задач</h2><p>Taskwarrior позволяет фильтроватать задачи по полям</p><p>Показать все задачи в статусе <code>in_progress</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>task check:in_progress
+</span></span></code></pre></div><p>Показать все задачи по проекту:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>task project:Blog
+</span></span></code></pre></div><p>Показать все задачи, где описание содержит слово &ldquo;статья&rdquo;:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>task description~статья
+</span></span></code></pre></div><p>Можно комбинировать фильтры, например:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>task project:Blog check:in_progress
+</span></span></code></pre></div></div><div class=post-categories>Категории:
+<a href=/categories/bash>Bash</a></div><footer class=post-footer><a href=https://itroyas.ru/ class=back-to-home>← Назад к статьям</a></footer></article></main><footer class=site-footer><div class=footer-container><p>&copy; 2025 ITroyas<br>Создано со смыслом</p></div></footer></div></body></html>
